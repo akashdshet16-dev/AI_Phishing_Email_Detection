@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prediction Result</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="main-content">
+
+<div class="container">
+
+    <!-- Header -->
+
+    <div class="header">
+
+        <h1>
+            <i class="fa-solid fa-circle-check"></i>
+            Prediction Result
+        </h1>
+
+        <p>AI Email Classification Report</p>
+
+    </div>
+
+    <!-- Result -->
+
+    <div class="content result-box">
+
+        {% if "Legitimate" in prediction %}
+
+            <h2 class="safe">
+                <i class="fa-solid fa-circle-check"></i>
+                Legitimate Email
+            </h2>
+
+            <p style="margin-top:10px;color:#555;">
+                This email appears to be safe and does not contain phishing characteristics.
+            </p>
+
+        {% else %}
+
+            <h2 class="phishing">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                Phishing Email
+            </h2>
+
+            <p style="margin-top:10px;color:#555;">
+                Warning! This email contains characteristics commonly found in phishing attacks.
+            </p>
+
+        {% endif %}
+
+        <div class="email-box">
+
+            <strong>Submitted Email</strong>
+
+            <hr style="margin:12px 0;">
+
+            <p>{{ email }}</p>
+
+        </div>
+
+        <a href="/" class="back-btn">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Check Another Email
+
+        </a>
+
+    </div>
+
+    <!-- Footer -->
+
+    <div class="footer">
+
+        Developed by <strong>Akash D Shet</strong>
+
+        • AI Phishing Email Detection
+
+        • © 2026
+
+    </div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

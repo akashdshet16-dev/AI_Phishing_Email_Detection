@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Phishing Email Detector</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="main-content">
+
+<div class="container">
+
+    <!-- Header -->
+
+    <div class="header">
+
+        <h1>
+            <i class="fa-solid fa-shield-halved"></i>
+            AI Phishing Email Detector
+        </h1>
+
+        <p>Machine Learning Based Email Security</p>
+
+    </div>
+
+    <!-- Content -->
+
+    <div class="content">
+
+        <p class="subtitle">
+
+            Paste your email below to check whether it is a
+            <strong>Legitimate Email</strong> or a
+            <strong>Phishing Email.</strong>
+
+        </p>
+
+        <form action="/predict" method="POST">
+
+            <textarea
+
+                name="email"
+
+                placeholder="Paste your email here..."
+
+                required>
+
+            </textarea>
+
+            <div class="buttons">
+
+                <button class="predict-btn" type="submit">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    Detect Email
+
+                </button>
+
+                <button class="clear-btn" type="reset">
+
+                    <i class="fa-solid fa-trash"></i>
+
+                    Clear
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+    <!-- Footer -->
+
+    <div class="footer">
+
+        Developed by <strong>Akash D Shet</strong>
+
+        • AI Phishing Email Detection
+
+        • © 2026
+
+    </div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
