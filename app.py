@@ -6,6 +6,11 @@ import nltk
 
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
+nltk.download("stopwords")
+nltk.download("wordnet")
+nltk.download("omw-1.4")
+
+
 
 # Create Flask app
 app = Flask(__name__)
