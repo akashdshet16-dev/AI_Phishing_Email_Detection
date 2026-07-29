@@ -130,15 +130,15 @@ https://ai-phishing-email-detection-4hki.onrender.com
                            ▼
                   Text Preprocessing
                            │
-      ┌─────────────────────────────────┐
-      │ • Lowercase Conversion          │
-      │ • Remove URLs                   │
-      │ • Remove Email IDs              │
-      │ • Remove Numbers                │
-      │ • Remove Punctuation            │
-      │ • Stopword Removal              │
-      │ • Lemmatization                 │
-      └─────────────────────────────────┘
+           ┌─────────────────────────────────┐
+           │ • Lowercase Conversion          │
+           │ • Remove URLs                   │
+           │ • Remove Email IDs              │
+           │ • Remove Numbers                │
+           │ • Remove Punctuation            │
+           │ • Stopword Removal              │
+           │ • Lemmatization                 │
+           └─────────────────────────────────┘
                            │
                            ▼
                 TF-IDF Feature Extraction
@@ -184,33 +184,17 @@ The best-performing model was selected and deployed in the web application.
 
 ---
 
-## Accuracy Comparison
+## Model Comparison
 
-![Accuracy Comparison](static/images/accuracy_comparison.png)
+The following table coompares the performance of different machine learning algorithms
 
----
-
-## Precision Comparison
-
-![Precision Comparison](static/images/precision_comparison.png)
+![Model Comparison](static/images/model_comparison.png)
 
 ---
 
-## Recall Comparison
+## Classification Report
 
-![Recall Comparison](static/images/recall_comparison.png)
-
----
-
-## F1 Score Comparison
-
-![F1 Score Comparison](static/images/f1_score_comparison.png)
-
----
-
-## Confusion Matrix
-
-![Confusion Matrix](static/images/confusion_matrix.png)
+![Classification Report](static/images/classification_report.png)
 
 ---
 
@@ -243,8 +227,10 @@ AI_Phishing_Email_Detection
 │         ├── precision_comparison.png
 │         ├── recall_comparison.png
 │         ├── f1_score_comparison.png
-│         └── confusion_matrix.png
-│
+│         ├──confusion_matrix.png
+│         ├──model_comparison.png
+│         └──classification_report.png
+│                   
 ├── templates
 │   ├── index.html
 │   └── result.html
@@ -328,17 +314,3 @@ Comparative evaluation across multiple Machine Learning algorithms demonstrated 
 **GitHub**
 
 https://github.com/akashdshet16-dev
-
----
-
-# 🙏 Acknowledgements
-
-Special thanks to the open-source community and the developers of Flask, Scikit-Learn, NLTK, and other libraries that made this project possible.
-
----
-
-# 📄 License
-
-This project is licensed under the **MIT License**.
-
-Feel free to use, modify, and distribute this project under the terms of the MIT License.
